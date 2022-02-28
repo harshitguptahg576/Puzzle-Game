@@ -1,0 +1,167 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trocchi',serif;
+}
+body{
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+/* Navbar */
+.logo{
+    color:rgb(255,140,0)
+}
+
+
+/* Fixed Buttons */
+#see{
+    /* position: absolute; */
+    /* top: 12.5%;
+    right: 12.5%; */
+    padding: 10px;
+    border-radius: 50%;
+    background-color: black;
+    color: rgb(0, 225, 255);
+    font-weight: 600;
+}
+#see:hover{
+    transform: scale(1.1);
+}
+
+#timer{
+    /* position: absolute; */
+    /* top: 12.5%;
+    left: 12.5%; */
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: black;
+    color: rgb(0, 225, 255);
+    font-weight: 600;
+}
+
+/* Puzzle Box */
+.puzzle-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    top: 25%;
+    }
+.boxes{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 6px;
+}
+.box{
+    margin: 2px;
+    padding: 2px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    transition: transform 0.25s linear;
+    transform: rotateY(0deg);
+    /* pointer-events: none;
+    user-select: none; */
+}
+.box:hover{
+    transform: rotateY(180deg);
+    filter: saturate(3);
+}
+.box *{
+    pointer-events: none;
+}
+.ques{
+    height:80px;
+    width:80px;
+    background-image: url("question.gif");
+    background-size: cover;
+    background-position: center center;
+    /* transition: transform 0.25s linear; */
+    /* display: none; */
+}
+.ques:hover{
+    background-color: black;
+    /* filter: contrast(12);
+    transform: rotateY(180deg); */
+    
+}
+.icon{
+    height:80px;
+    width:80px;
+    background-image:url('icons.jpg');
+    filter: saturate(1.8);
+    /* transition: transform 0.25s linear;
+    transform: rotateY(-180deg); */
+    display: none;
+}
+/* .icon:hover{
+    filter: saturate(3);
+    transform: rotateY(0deg);
+} */
+/* 
+.flip{
+    display: none;
+} */
+
+
+/* Every Icon By One Image */
+.icon1{
+    background-position: -3px -160px;
+}
+.icon2{
+    background-position: -3px -316px;
+}
+.icon3{
+    background-position: -238px -159px;
+}
+.icon4{
+    background-position: -238px -316px;
+}
+.icon5{
+    background-position: -316px -315px;
+}
+.icon6{
+    background-position: -160px -80px;
+}
+.icon7{
+    background-position: -81px -315px;
+}
+.icon8{
+    background-position: -315px -160px;
+}
+
+/* Game Start Stop */
+.game{
+    position: absolute;
+    bottom: 12.5%;
+    width: 100%;
+    text-align: center;
+}
+.start-stop{
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 28px;
+    background-color: black;
+    color: rgb(0, 225, 255);
+}
+.score-box{
+    padding: 10px;
+    font-size: 28px;
+    margin: 20px 0px;
+    color: rgb(0, 225, 255);
+}
+
+@media screen and (max-width: 992px) {
+    .mb{
+        display: none;
+    }
+    .boxes{
+    grid-template-columns: auto auto auto;
+    }
+  }
